@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Server is booting up...</title>
+  </head>
+  <body>
+    <h1>El servidor está iniciándose</h1>
+    <p>Reintentando en <span id="timer">5</span> segundos...</p>
+      <script>
+        const timerElem = document.querySelector("#timer");
+        let time = parseInt(timerElem.innerText);
+        setInterval(()=>{
+          if(time > 0){
+            timerElem.innerHTML = --time;
+          }
+        }, 1000)
+        setTimeout(()=>{window.location.reload()}
+        , time * 1000);
+      </script>
+    </p>
+  </body>
+</html>
